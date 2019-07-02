@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="author" content="Danilo L.">
+  <title>JMBG Validacija</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+    @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+
+    body {
+      background: url("http://4.bp.blogspot.com/-73tJ0eD8H_Y/TsXyN9naATI/AAAAAAAAABQ/NEA5WZnVWNE/s1600/stacks-of-paper.jpg") no-repeat center;
+      font-family: "Source Sans Pro", sans-serif;
+    }
+
+    h1 {
+      font-size: 1.5em;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      display: flex;
+      flex-direction: column;
+      width: 20%;
+      border: 1px solid #985e0e;
+      padding: 15px;
+      margin: 0 auto;
+      font-size: 1.3em;
+    }
+
+    .input {
+      font-size: 1rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    span {
+      height: 16px;
+      padding: 0 0 12px;
+    }
+
+    label {
+      position: relative;
+      margin: 5px 0;
+    }
+
+    #jmbg {
+      border: 1px dashed #985e0e;
+      font-size: 1rem;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="JMBG_class.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>JMBG Validacija</h1>
+    <label>Korisnik: <input type="text" class="input" placeholder="Ime i prezime" /></label>
+    <label>Datum rođenja: <input class="input" type="date" /></label>
+    <label>Mesto rođenja:
+      <select class="input" id="odabir">
+        <option value="71">Beograd</option>
+        <option value="72">Kragujevac</option>
+        <option value="72">Jagodina</option>
+        <option value="73">Nis</option>
+        <option value="73">Pirot</option>
+        <option value="73">Toplica</option>
+        <option value="74">Leskovac</option>
+        <option value="74">Vranje</option>
+        <option value="75">Zajecar</option>
+        <option value="75">Bor</option>
+        <option value="76">Smederevo</option>
+        <option value="76">Pozarevac</option>
+        <option value="77">Macva</option>
+        <option value="77">Kolubara</option>
+        <option value="78">Cacak</option>
+        <option value="78">Kraljevo</option>
+        <option value="78">Krusevac</option>
+        <option value="79">Uzice</option>
+        <option value="80">Novi Sad</option>
+        <option value="81">Sombor</option>
+        <option value="82">Subotica</option>
+        <option value="80">Vrbas</option>
+        <option value="87">Kikinda</option>
+        <option value="85">Zrenjanin</option>
+        <option value="86">Pancevo</option>
+        <option value="86">Vrsac</option>
+        <option value="89">Ruma</option>
+        <option value="88">Sr. Mitrovica</option>
+        <option value="91">Pristina</option>
+        <option value="92">Kos. Mitrovica</option>
+        <option value="93">Pec</option>
+        <option value="94">Djakovica</option>
+        <option value="95">Prizren</option>
+        <option value="96">Gnjilane</option>
+        <option value="96">Kos. Kamenica</option>
+        <option value="96">Vitina</option>
+        <option value="96">Novo Brdo</option>
+      </select></label>
+    <span>Rod</span>
+    <label><input type="radio" name="pol" /> Ženski</label>
+    <label><input type="radio" name="pol" /> Muški</label>
+    <label>
+      <input type="text" id="jmbg" placeholder="JMBG" size="13" maxlength="13" />
+    </label>
+    <span id="rez"></span>
+    <button type="button">Provera</button>
+  </div>
+</body>
+
+</html>
